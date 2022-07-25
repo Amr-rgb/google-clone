@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import { Avatar } from "./Avatar";
+import { HeaderOptions } from "./HeaderOptions";
 
 export const Header = () => {
   const router = useRouter();
@@ -54,6 +55,8 @@ export const Header = () => {
           url="https://placehold.jp/3d4070/ffffff/150x150.png"
         />
       </div>
+
+      <HeaderOptions />
     </header>
   );
 };
