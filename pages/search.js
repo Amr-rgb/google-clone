@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Header } from "../components/Header";
 
 const search = () => {
   return (
@@ -8,6 +9,7 @@ const search = () => {
       </Head>
 
       {/* header */}
+      <Header />
 
       {/* search results */}
     </div>
