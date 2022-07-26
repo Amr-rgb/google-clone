@@ -30,8 +30,8 @@ export async function getServerSideProps(context) {
   const API_KEY = process.env.API_KEY;
   const CONTEXT_KEY = process.env.CONTEXT_KEY;
 
-  const usedummyData = true;
-  const startIndex = context.query.start;
+  const usedummyData = false;
+  const startIndex = context.query.start || "0";
 
   const data = usedummyData
     ? Response
