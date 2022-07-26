@@ -37,6 +37,7 @@ export const Header = () => {
             ref={searchInputRef}
             type="text"
             className="flex-1 w-full focus:outline-none"
+            defaultValue={Router.query.term}
           ></input>
           <XIcon
             className="h-7 sm:mr-3 text-gray-500 cursor-pointer hover:scale-125 duration-100"
