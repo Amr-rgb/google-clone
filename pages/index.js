@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRef } from "react";
-import { useRouter } from "next/router";
+import Router from "next/router";
 import { Avatar } from "../components/Avatar";
 import { MicrophoneIcon, ViewGridIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
 import { Footer } from "../components/Footer";
 
 export default function Home() {
-  const router = useRouter();
   const searchInputRef = useRef(null);
 
   const search = (e) => {
@@ -17,7 +16,7 @@ export default function Home() {
     const term = searchInputRef.current.value;
     if (!term) return;
 
-    router.push(`/search?term=${term}`);
+    Router.push(`/search?term=${term}`);
   };
 
   return (

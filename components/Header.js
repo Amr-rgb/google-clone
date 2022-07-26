@@ -1,13 +1,12 @@
 import { SearchIcon } from "@heroicons/react/outline";
 import { MicrophoneIcon, XIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import Router from "next/router";
 import { useRef } from "react";
 import { Avatar } from "./Avatar";
 import { HeaderOptions } from "./HeaderOptions";
 
 export const Header = () => {
-  const router = useRouter();
   const searchInputRef = useRef(null);
 
   const search = (e) => {
@@ -16,7 +15,7 @@ export const Header = () => {
     const term = searchInputRef.current.value;
     if (!term) return;
 
-    router.push(`/search?term=${term}`);
+    Router.push(`/search?term=${term}`);
   };
 
   return (
