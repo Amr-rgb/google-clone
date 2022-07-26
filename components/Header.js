@@ -30,7 +30,10 @@ export const Header = () => {
           className="cursor-pointer"
         />
 
-        <form className="flex-1 flex px-6 py-3 ml-10 mr-5 border border-gray-200 rounded-full shadow-lg max-w-3xl items-center">
+        <form
+          onSubmit={search}
+          className="flex-1 flex px-6 py-3 ml-10 mr-5 border border-gray-200 rounded-full shadow-lg max-w-3xl items-center"
+        >
           <input
             ref={searchInputRef}
             type="text"
